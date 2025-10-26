@@ -31,7 +31,7 @@ plt.show()
 # ---- Convert test image to grayscale and detect faces ----
 gray_test = cv2.cvtColor(test_img, cv2.COLOR_BGR2GRAY)
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-faces = face_cascade.detectMultiScale(gray_test, 1.1, 4)
+faces = face_cascade.detectMultiScale(gray_test)
 
 authorized = False
 

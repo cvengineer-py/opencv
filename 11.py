@@ -21,14 +21,8 @@ if left_img.shape != right_img.shape:
 # ---- StereoSGBM parameters ----
 stereo = cv2.StereoSGBM_create(
     minDisparity=0,
-    numDisparities=16*6,  # must be divisible by 16
-    blockSize=7,
-    P1=8*3*7**2,
-    P2=32*3*7**2,
-    disp12MaxDiff=1,
-    uniquenessRatio=10,
-    speckleWindowSize=100,
-    speckleRange=32
+    numDisparities=16,
+    blockSize=5
 )
 
 # ---- Compute disparity map ----
